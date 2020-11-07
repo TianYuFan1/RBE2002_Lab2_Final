@@ -11,6 +11,7 @@ class SonarSensor{
         void Init(void); 
         float ReadData(void); 
         float PrintData(void);
+        float Ping(void);
 };
 
 #endif

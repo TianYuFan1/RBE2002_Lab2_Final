@@ -6,6 +6,7 @@
 
 IRsensor SharpIR;
 SonarSensor HCSR04;
+
 void WallFollowingController::Init(void)
 {
     SharpIR.Init();
