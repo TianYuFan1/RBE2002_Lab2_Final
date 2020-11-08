@@ -23,10 +23,10 @@ void setup() {
 }
 
 void loop() {
-  // HCSR04.Ping();
-  // HCSR04.ReadData();
+  HCSR04.Ping();
+  HCSR04.ReadData();
 
-  SharpIR.ReadData();
+  // SharpIR.ReadData();
 
   switch(robot_state)
   {
