@@ -16,16 +16,18 @@ SpeedController PIcontroller;
 WallFollowingController PDcontroller;
 
 extern SonarSensor HCSR04;
-
+extern IRsensor SharpIR;
 void setup() {
   PIcontroller.Init();
   PDcontroller.Init();
 }
 
 void loop() {
-  HCSR04.Ping();
-  HCSR04.ReadData();
-  
+  // HCSR04.Ping();
+  // HCSR04.ReadData();
+
+  SharpIR.ReadData();
+
   switch(robot_state)
   {
     case ROBOT_IDLE:

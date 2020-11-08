@@ -15,5 +15,11 @@ float IRsensor::ReadData(void)
 {
   //assignment 1.1
   //read out and calibrate your IR sensor, to convert readouts to distance in [cm]
-  return 0;
+  int adc = analogRead(pin_IR);
+  float voltage = (5.0/1024.0) * adc;
+  float distance = (20.0/voltage);
+  Serial.println();
+  Serial.print(voltage);
+  delay(100);
+  return voltage;
 }
