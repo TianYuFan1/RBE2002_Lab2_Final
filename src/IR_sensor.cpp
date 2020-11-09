@@ -17,7 +17,8 @@ float IRsensor::ReadData(void)
   //read out and calibrate your IR sensor, to convert readouts to distance in [cm]
   int adc = analogRead(pin_IR);
   float voltage = (5.0/1024.0) * adc;
-  float inverse_distance = 0.0408*voltage + 0.0004;
-  float distance = 1.0/inverse_distance;
-  return distance;
+  return voltage;
+  // float inverse_distance = 0.0408*voltage + 0.0004;
+  // float distance = 1.0/inverse_distance;
+  // return distance;
 }
