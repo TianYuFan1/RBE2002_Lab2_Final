@@ -26,7 +26,7 @@ void loop() {
   // HCSR04.Ping();
   // HCSR04.ReadData();
 
-  SharpIR.ReadData();
+  Serial.println(SharpIR.ReadData());
 
   switch(robot_state)
   {
